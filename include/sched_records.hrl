@@ -1,0 +1,14 @@
+-record(flight_period, {flight_key, legs, segments}).
+-record(flight_key, {airline_code, flight_number, begin_date, end_date, dow}).
+-record(leg, {sequence, leg_key, leg_details, leg_cabin_details, data_elements}).
+-record(leg_key, {board_point, off_point}).
+-record(leg_details, {dep_time, arr_time, ela_time}).
+-record(leg_cabin_detail, {cabin_code, capacity}).
+-record(segment, {segment_key, segment_cabin_details, data_elements, segment_legs}).
+-record(segment_key, {board_point, off_point}).
+-record(segment_cabin_detail, {cabin_code, classes, family_cabin_details}).
+-record(family_cabin_detail, {family_code, classes}).
+-record(segment_legs, {board_leg, via_legs, off_leg}).
+
+-record(segment_period, {flight_key, segment}).
+-record(leg_period, {flight_key, leg}).
